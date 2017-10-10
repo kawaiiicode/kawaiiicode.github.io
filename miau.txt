@@ -1,0 +1,519 @@
+<!--meow-->
+<!--
+Código criado por Charisse (http://codepen.io/charisseysabel/pen/adXGMe)
+Editado por Roberta (http://reinokawaii.blogspot.com)
+-->
+<style type="text/css">
+#me-nu { /* area geral */
+  margin: 0 20px 0 10px;
+  width: 210px;
+  z-index: 100;
+}
+#me-nu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#me-nu li { list-style-type: none; }
+#me-nu a { /* links */
+  color: #000;
+  font-size: 17px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Bad Script';
+}
+#me-nu .palavra {
+  padding: 5px 0;
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 210px;
+  top: 0;
+  left: 0;
+}
+
+#me-nu ul.palavra ul li {
+  padding: 0 0 5px;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+/* links ocultos */
+#me-nu .oculto {
+  display: block;
+  padding: 0 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;/* texto a direita trocar por left se quiser posicionar a esquerda */  
+  height: 0;
+  overflow: hidden;
+  -moz-transition: all 1s;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+#me-nu ul.palavra:hover .oculto { height: 200px;
+}
+#search {
+width: 100px; /* largura caixa de pesquisa */
+height: 35px;/* altura caixa de pesquisa */
+float: right;
+text-align: center;
+/* background caixa de pesquisa */
+background: transparent;
+}
+
+#search-box {
+width: 100px;
+    margin: 0;
+    border-bottom: none;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+    background: transparent;
+    text-align: center;
+    color: #000;/* cor do texto da caixa de pesquisa */
+font-family: 'Bad Script';
+font-size: 17px;
+}
+/* -------------------------------- 
+
+Gato
+
+-------------------------------- */
+.cat {
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  transform: translateY(100%);
+  position: fixed;/* fica fixo na tela */
+  width: 10%;/* tamanho do gatinho */
+  margin: 0;
+  bottom: 0;
+  right: 0;/* mude right para left se quiser deixar o gato a esquerda */
+  -webkit-animation: cat-animate 2s 2s forwards;
+  -moz-animation: cat-animate 2s 2s forwards;
+  -o-animation: cat-animate 2s 2s forwards;
+  animation: cat-animate 2s 2s forwards;
+}
+svg {
+  width: 100%;
+  height: 50%;
+}
+@-webkit-keyframes cat-animate {
+  0% {
+    -webkit-transform: translateY(100%);
+  }
+  50% {
+    -webkit-transform: translateY(75%);
+  }
+  80% {
+    -webkit-transform: translateY(75%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+  }
+}
+@-moz-keyframes cat-animate {
+  0% {
+    -moz-transform: translateY(100%);
+  }
+  50% {
+    -moz-transform: translateY(75%);
+  }
+  80% {
+    -moz-transform: translateY(75%);
+  }
+  100% {
+    -moz-transform: translateY(50%);
+  }
+}
+@keyframes cat-animate {
+  0% {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  50% {
+    -webkit-transform: translateY(75%);
+    -moz-transform: translateY(75%);
+    -ms-transform: translateY(75%);
+    -o-transform: translateY(75%);
+    transform: translateY(75%);
+  }
+  80% {
+    -webkit-transform: translateY(75%);
+    -moz-transform: translateY(75%);
+    -ms-transform: translateY(75%);
+    -o-transform: translateY(75%);
+    transform: translateY(75%);
+  }
+  100% {
+    -webkit-transform: translateY(50%);
+    -moz-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    -o-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+}
+#eyes-right,
+#eyes-left {
+  -webkit-animation: blink 3s infinite linear;
+  -moz-animation: blink 3s infinite linear;
+  -o-animation: blink 3s infinite linear;
+  animation: blink 3s infinite linear;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+#eyes-right circle,
+#eyes-left circle {
+  fill: lightgreen;/* cor dos olhos */
+}
+@-webkit-keyframes blink {
+  0% {
+    -webkit-transform: rotateX(0deg);
+  }
+  70% {
+    -webkit-transform: rotateX(0deg);
+  }
+  75% {
+    -webkit-transform: rotateX(80deg);
+  }
+  80% {
+    -webkit-transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    -moz-transform: rotateX(0deg);
+  }
+  70% {
+    -moz-transform: rotateX(0deg);
+  }
+  75% {
+    -moz-transform: rotateX(80deg);
+  }
+  80% {
+    -moz-transform: rotateX(0deg);
+  }
+  100% {
+    -moz-transform: rotateX(0deg);
+  }
+}
+@keyframes blink {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  70% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  75% {
+    -webkit-transform: rotateX(80deg);
+    -moz-transform: rotateX(80deg);
+    -ms-transform: rotateX(80deg);
+    -o-transform: rotateX(80deg);
+    transform: rotateX(80deg);
+  }
+  80% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+  }
+}
+/* -------------------------------- 
+
+WHISKERS LEFT
+
+-------------------------------- */
+#wh-left {
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-animation: move-whiskers-left 5s infinite alternate;
+  -moz-animation: move-whiskers-left 5s infinite alternate;
+  -o-animation: move-whiskers-left 5s infinite alternate;
+  animation: move-whiskers-left 5s infinite alternate;
+}
+@-webkit-keyframes move-whiskers-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes move-whiskers-left {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(3deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+@keyframes move-whiskers-left {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(3deg);
+    -moz-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    -o-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+/* -------------------------------- 
+
+WHISKERS RIGHT
+
+-------------------------------- */
+#wh-right {
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  -ms-transform-origin: 0% 100%;
+  -o-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  -webkit-animation: move-whiskers-right 5s infinite alternate;
+  -moz-animation: move-whiskers-right 5s infinite alternate;
+  -o-animation: move-whiskers-right 5s infinite alternate;
+  animation: move-whiskers-right 5s infinite alternate;
+}
+@-webkit-keyframes move-whiskers-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes move-whiskers-right {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(-3deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+@keyframes move-whiskers-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+/* -------------------------------- 
+
+EARS
+
+-------------------------------- */
+#ears-right:hover,
+#ears-left:hover {
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-animation: move-ears-right 0.5s infinite alternate;
+  -moz-animation: move-ears-right 0.5s infinite alternate;
+  -o-animation: move-ears-right 0.5s infinite alternate;
+  animation: move-ears-right 0.5s infinite alternate;
+}
+@-webkit-keyframes move-whiskers-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+  }
+}
+@-moz-keyframes move-ears-right {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  50% {
+    -moz-transform: rotate(-3deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+  }
+}
+@keyframes move-ears-right {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    -o-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+</style>
+
+<br />
+<div id="me-nu">
+  <ul class="palavra">
+    <li><div class="cat">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="209px"
+			 height="191px" viewBox="0 0 209 191" enable-background="new 0 0 209 191" xml:space="preserve">
+		<g id="wh-left-main">
+			<g id="wh-left">
+				
+					<path id="wh-left-top_2_" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+					M53.667,62.864c0,0-28.5-16.031-47.667-7.864"/>
+				
+					<path id="wh-left-mid_2_" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+					M55.667,67.864c0,0-28.5-16.031-47.667-7.864"/>
+				
+					<path id="wh-left-low_2_" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+					M59.667,72.864c0,0-28.5-16.031-47.667-7.864"/>
+			</g>
+		</g>
+		<g id="wh-right-main">
+			<g id="wh-right">
+				
+					<path id="wh-right-top_1_" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+					M156,62.864c0,0,28.5-16.031,47.667-7.864"/>
+				
+					<path id="wh-right-mid_1_" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+					M154,67.864c0,0,28.5-16.031,47.667-7.864"/>
+				
+					<path id="wh-right-low_1_" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="
+					M150,72.864c0,0,28.5-16.031,47.667-7.864"/>
+			</g>
+		</g>
+		<g id="body-main">
+			<g id="body">
+				<path fill="#000" d="M163.88,20.63c0,0-58.571-8.479-109.544-0.634C27.333,40.333,33.667,187,33.667,187L192,186
+					C192,186,189.38,41.38,163.88,20.63z M118.323,63.621c-2.946,4.245-6.662,4.622-11.165,2.408
+					c-2.833-1.393-4.046,1.053-6.787,1.589c-2.931,0.573-6.026-0.717-8.5-2.146c-1.674-0.967-0.164-3.56,1.515-2.59
+					c2.963,1.712,5.841,2.447,8.859,0.296c0.904-0.645,1.821-1.082,2.953-1.094c4.178-0.04,6.7,5.546,10.534,0.023
+					C116.827,60.53,119.43,62.027,118.323,63.621z"/>
+			</g>
+		</g>
+		<g id="right-eyes">
+			<g id="eyes-right">
+				<circle fill="#29ABE2" cx="132.25" cy="47" r="2.75"/>
+			</g>
+		</g>
+		<g id="left-eyes">
+			<g id="eyes-left">
+				<circle fill="#29ABE2" cx="81.25" cy="47" r="2.75"/>
+			</g>
+		</g>
+		<g id="right-ears">
+			<g id="ears-right">
+				<path fill="#000" d="M155.867,16.064c-18.657,21.797,7.975,32.194,15.714,19.56c7.739-12.635,6.966-22.845,1.943-26.194
+					C168.449,6.046,158.079,13.483,155.867,16.064z M164.409,18.082c1.774-2.146,3.87-3.595,5.433-2.312
+					c2.569,2.111-0.14,7.572-0.14,7.572L164.409,18.082z"/>
+			</g>
+		</g>
+		<g id="left-ears">
+			<g id="ears-left">
+				<path fill="#000" d="M57.102,4.364c-5.969,0.905-10.997,9.824-9.344,24.547c1.654,14.724,30.181,16.597,22.523-11.054
+					C69.374,14.582,63.132,3.45,57.102,4.364z M54.667,18.583c0,0-0.14-6.094,3.083-6.917c1.958-0.5,3.242,1.701,3.94,4.396
+					L54.667,18.583z"/>
+			</g>
+		</g>
+		</svg>
+	</div><ul class="oculto">
+	<li><a href="javascript:scroll(0,0)">Top</a></li>
+    <li><a href="javascript:history.go()">Atualizar</a></li>
+	<li><form id='search' method='get' action="/search" name='searchForm' style='display:inline;'>
+<input id='search-box' name='q' onblur='if (this.value == &quot;&quot;) this.value = &quot;Pesquisar...&quot;;' onfocus='if (this.value == &quot;Pesquisar...&quot;) this.value = &quot;&quot;;' size='28' type='text' value='Pesquisar...'/></form>
+</li>
+
+    </ul>
+  </li></ul>
+</div><!-- /cat -->
+    
+        <script>
+		/*
+	Hover the ears :3
+*/
+</script>
+<!--meow-->
