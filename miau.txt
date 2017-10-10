@@ -1,8 +1,4 @@
 <!--meow-->
-<!--
-Código criado por Charisse (http://codepen.io/charisseysabel/pen/adXGMe)
-Editado por Roberta (http://reinokawaii.blogspot.com)
--->
 <style type="text/css">
 #me-nu { /* area geral */
   margin: 0 20px 0 10px;
