@@ -32,7 +32,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function togglePlayButton(play) {
-  document.getElementById("youtube-icon").src = play ? "https://1.bp.blogspot.com/-i2SfKRZeovY/Wnw5uFcc7LI/AAAAAAAASgQ/_GTv84bnVLEOcIwBRzhqpN42EaFtX7mWgCLcBGAs/s1600/playpink.png" : "https://2.bp.blogspot.com/-W-F4Lwz5qFk/Wnw5vbpwByI/AAAAAAAASgU/QRLkcMQaWH0tZ6n5qSXZFu9OguaUr8c6ACLcBGAs/s1600/pausepink.png";
+  document.getElementById("youtube-icon").src = play ? "https://2.bp.blogspot.com/-W-F4Lwz5qFk/Wnw5vbpwByI/AAAAAAAASgU/QRLkcMQaWH0tZ6n5qSXZFu9OguaUr8c6ACLcBGAs/s1600/pausepink.png" : "https://1.bp.blogspot.com/-i2SfKRZeovY/Wnw5uFcc7LI/AAAAAAAASgQ/_GTv84bnVLEOcIwBRzhqpN42EaFtX7mWgCLcBGAs/s1600/playpink.png";
 }
 
 function toggleAudio() {
