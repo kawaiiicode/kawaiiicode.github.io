@@ -114,7 +114,7 @@
     return this;
   };
   
-  $(".header-inner").sparkle({
+  $("#header").sparkle({
     size: 25,
   }).sparkle({
     delay: 1000,
@@ -123,7 +123,7 @@
   });
 
   /*window.setTimeout(function() {
-    $(".header-inner").sparkle("destroy");
+    $("#header").sparkle("destroy");
   }, 21000);*/
 
 })(jQuery, window, document);
