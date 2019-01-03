@@ -34,7 +34,7 @@ $(function() {
   // for an image, the image needs to be fully loaded to set
   // the canvas to it's height/width.
   // speed allows us to control... the ... velocity 
-  $("#image").imagesLoaded( function() {
+  $("#img").imagesLoaded( function() {
     $(".img").sparkleh({
       count: 25,
       color: ["#f3edc4","#253943","#659e3f"],
