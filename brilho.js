@@ -1,7 +1,7 @@
 (function($, window, document) {
 
   const defaults = {
-    fill: "#fff",
+    fill: "#f9b",
     stroke: "#000",
     size: 20,
     delay: 0,
@@ -114,7 +114,7 @@
     return this;
   };
   
-  $("h3").sparkle({
+  $("#Header1_headerimg").sparkle({
     size: 25,
   }).sparkle({
     delay: 1000,
@@ -123,7 +123,7 @@
   });
 
   /*window.setTimeout(function() {
-    $("h3").sparkle("destroy");
+    $("#Header1_headerimg").sparkle("destroy");
   }, 21000);*/
 
 })(jQuery, window, document);
