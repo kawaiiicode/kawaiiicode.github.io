@@ -114,7 +114,7 @@
     return this;
   };
   
-  $("#Header1_headerimg").sparkle({
+  $(".header-inner").sparkle({
     size: 25,
   }).sparkle({
     delay: 1000,
@@ -123,7 +123,7 @@
   });
 
   /*window.setTimeout(function() {
-    $("#Header1_headerimg").sparkle("destroy");
+    $(".header-inner").sparkle("destroy");
   }, 21000);*/
 
 })(jQuery, window, document);
